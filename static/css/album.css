@@ -1,0 +1,127 @@
+ body {
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .edit-card {
+      padding: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    #grid img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #222;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    #grid img:hover {
+      transform: scale(1.03);
+      border-color: #fff;
+    }
+
+.edit-card {
+  position: fixed;           /* overlay mode */
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;               /* 80% viewport width */
+  max-width: 800px;
+  height: auto;
+  max-height: 80vh;          /* max height, so it doesn't go off screen */
+  margin: 0;                 /* no margin needed, we center by left+transform */
+  display: flex;
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(139, 13, 13, 0.15);
+  font-family: Arial, sans-serif;
+  background: rgb(60, 60, 60);
+  z-index: 9999;             /* on top */
+  padding: 0;                /* no extra padding, metadata has its own */
+}
+
+/* Metadata styling on left */
+.metadata {
+  flex: 1;                   /* take left side */
+  padding: 20px;
+  background: #4e4e4e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.metadata h2 {
+  margin: 0 0 10px 0;
+}
+
+.metadata p {
+  margin: 0;
+  color: #555;
+}
+
+/* Image container on right */
+.image-container {
+  width: 40%;                /* right side 40% */
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.exitbtn {
+  position: absolute;   /* absolute inside .edit-card */
+  top: 10px;            /* little padding from top */
+  right: 10px;          /* little padding from right */
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1000;        /* make sure it’s above everything */
+  transition: background 0.3s ease;
+}
+
+.exitbtn:hover {
+  background: rgba(255,0,0,0.8);  /* red on hover for vibes */
+}
+
+/* Responsive stack on small screens */
+@media (max-width: 600px) {
+  .edit-card {
+    flex-direction: column;
+    width: 95vw;
+    max-height: none;        /* remove height limit for stacking */
+  }
+  .image-container {
+    width: 100%;
+    height: 200px;
+  }
+}

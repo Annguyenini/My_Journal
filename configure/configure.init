@@ -1,0 +1,20 @@
+
+[general]
+device_name = 
+log_interval =10
+
+[gps]
+enabled = true
+port = /dev/ttyUSB0
+baudrate = 9600
+
+[camera]
+resolution = 1280x720
+save_path = ../static/logs/citites/{city}/images
+
+
+[seting]
+start_trip = false
+
+[path]
+dault_image_path = ../static/logs/defaul

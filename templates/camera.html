@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera View</title>
+    <link rel="stylesheet" href="../static/css/leaflet.css" />
+    <script src="../static/asset/js/leaflet.js" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+    <p id="des-image">Camera Feed</p>
+    <div class="container">
+        <video id="cameraFeed" autoplay></video>
+        <p id="des-image">Camera Feed</p>
+        </div>
+
+<script>
+    if('mediaDevices' in navigator &&'getUserMedia'in navigator.mediaDevices){
+        navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: false
+        })
+        .then(stream => {
+            const video = document.getElementById('cameraFeed');
+            video.srcObject = stream;
+            video.play();
+        })
+        .catch(error => {
+            console.error('Error accessing camera:', error);
+            document.getElementById('des-image').textContent = 'Error accessing camera';
+        });
+    }
+</script>
+</body>
+</html>

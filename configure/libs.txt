@@ -1,0 +1,2 @@
+shapely
+libgeos-dev

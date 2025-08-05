@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery of {{albumId}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/album.css">
+</head>
+<body data-album-id="{{ albumId }}">
+
+  <h1>Gallery of {{albumId}}</h1>
+<div class = "gallery">
+
+  <div class="edit-card">
+
+  </div>
+
+  <div id="grid">
+    
+    <!-- Add more images as needed -->
+  </div>
+</div>
+<!-- Load everything as a module -->
+<script type="module" src="{{ url_for('static', filename='asset/js/album.js') }}"></script>
+
+
+
+
+</body>
+</html>

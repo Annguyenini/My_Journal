@@ -1,0 +1,31 @@
+react_trip/
+static/asset/qqq/
+static/asset/tiles/
+static/asset/logs/
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# VS Code
+.vscode/
+
+# Build stuff
+dist/
+build/
+
+
+# Dependencies
+venv/
+.env/
+myenv/
+package-lock.json
+Pipfile.lock
+
+# System/IDE junk
+.idea/
+*.swp
