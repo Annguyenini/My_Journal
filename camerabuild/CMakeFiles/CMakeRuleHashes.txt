@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+8041cf4daf0817abfa1ee2dc5d2a609a .qt_plugins/Qt6_QmlPlugins_Imports_trip.cmake
+4802ce80447738579691ad0463b5512a CMakeFiles/trip_autogen
+aa06223df0c81659f91eafe2bcd219b1 CMakeFiles/trip_qmlimportscan

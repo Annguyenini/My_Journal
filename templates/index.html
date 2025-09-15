@@ -3,41 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Map Test</title>
-
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="../static/css/leaflet.css" />
-
-    <!-- Leaflet JS -->
-    <script src="../static/asset/mapjs/leaflet.js" defer></script>
-    <script type="module" src="../static/asset/mapjs/mapLoad.js"></script>
-
     
-    <!--  own CSS -->
+    <!-- Triplist CSS -->
+    <link rel="stylesheet" href="../static/css/triplist.css" />
+
+    <!-- Triplist JS -->
+    <script type="module" src="{{ url_for('static', filename='asset/js/triplist.js') }}"></script>
+
+    <title>Index Page</title>
+
+    <!-- Own CSS -->
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/styles.css') }}"
     />
   </head>
   <body>
-    <div class="container">
-    <div id="map"></div>
-    <div id="gallery"  class="map-overlay">
-    <p id="des-image"></p>
-    </div>
-    </div>
-    <!-- <div>
-      <button id="prevBtn" type="button">Previous</button>
-      <button id="nextBtn" type="button">Next</button>
-    </div> -->
-    <script type="module" src="../static/asset/js/gallerry.js"></script>
+    <h1>Tripin control</h1>
 
-    <script>
-      
-    </script>
-    
+    <div class="container">
+      <!-- Debugging:cl test JS link -->
+
+      <div class="Trips">
+        <h2 style ="text-align: center;">Current Trip</h2>  
+        <div id="currentTrip"></div>
+        <h2 style ="text-align: center;">Previous Trips</h2>
+        <div id="pastTrips"></div>
+      </div>
+    </div>
   </body>
 </html>
-
-
-<!-- organize and makin structure for program -->

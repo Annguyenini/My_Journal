@@ -1,0 +1,9 @@
+/home/nini/trip/camerabuild/CMakeFiles/trip.dir
+/home/nini/trip/camerabuild/CMakeFiles/trip_qmlimportscan.dir
+/home/nini/trip/camerabuild/CMakeFiles/edit_cache.dir
+/home/nini/trip/camerabuild/CMakeFiles/rebuild_cache.dir
+/home/nini/trip/camerabuild/CMakeFiles/list_install_components.dir
+/home/nini/trip/camerabuild/CMakeFiles/install.dir
+/home/nini/trip/camerabuild/CMakeFiles/install/local.dir
+/home/nini/trip/camerabuild/CMakeFiles/install/strip.dir
+/home/nini/trip/camerabuild/CMakeFiles/trip_autogen.dir

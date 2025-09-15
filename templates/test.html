@@ -2,13 +2,51 @@
 <html>
 <head>
   <title>JS Test</title>
+  <style>
+  .main {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+  width: 100%;   /* always take full width */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* hidden off-screen */
+  width: 300px;
+  height: 100%;
+  background: #eee;
+  transition: right 0.3s ease;
+  z-index: 10;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.main.shifted {
+  margin-left: -100px; /* move left the exact width of sidebar */
+}
+
+  </style>
   <script>
-    function showAlert() {
-      alert("JS is working!");
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const main = document.getElementById('main');
+      sidebar.classList.toggle('active');
+      main.classList.toggle('shifted');
     }
+
+    
   </script>
 </head>
 <body onload="showAlert()">
-  <h1>Hello</h1>
+  <div id="main" class="main">Main content</div>
+  <div id="sidebar" class="sidebar">Sidebar panel</div>
+  <button onclick="toggleSidebar()">Toggle</button>
+
 </body>
 </html>

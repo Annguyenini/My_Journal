@@ -1,4 +1,6 @@
-import { zoomTo,changeCallCityColor } from "../mapjs/mapLoad.js";
+
+
+// import { zoomTo,changeCallCityColor } from "../mapjs/mapLoad.js";
 export async function callGallery(selectedCity) {
   removeOldCard();
 
@@ -28,8 +30,8 @@ async function getCityData(cityName) {
   const city = data.cities.find(city => city.name === cityName);
   console.log(city);
   if (city) {
-    zoomTo(parseFloat(city.properties.lat), parseFloat(city.properties.lng));
-    changeCallCityColor(city.name);
+    // zoomTo(parseFloat(city.properties.lat), parseFloat(city.properties.lng));
+    // changeCallCityColor(city.name);
      // parse floats just in case
     return city;
   }

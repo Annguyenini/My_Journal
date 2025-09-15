@@ -30,3 +30,5 @@ Pipfile.lock
 # System/IDE junk
 .idea/
 *.swp
+
+logs
